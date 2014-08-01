@@ -7,10 +7,6 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="mtao"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -26,8 +22,8 @@ ZSH_THEME="mtao"
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to disable command auto-correction.
-# DISABLE_CORRECTION="true"
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -48,13 +44,14 @@ ZSH_THEME="mtao"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial svn sudo cp git-extras github gitignore git-remote-branch history history-substring-search python)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git mercurial sudo cp history history-substring-search python)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/1.8/bin/:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/1.8/bin/:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -72,4 +69,14 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias chromium-dev="chromium --user-data-dir='~/.config/chromium-dev'"
+test -d $HOME/.cache/mendeley_dropbox || mkdir -p $HOME/.cache/mendeley_dropbox
