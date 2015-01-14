@@ -47,12 +47,12 @@ ZSH_THEME="mtao"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git mercurial sudo cp history history-substring-search python)
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/1.8/bin/:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
