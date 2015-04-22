@@ -80,3 +80,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias chromium-dev="chromium --user-data-dir='~/.config/chromium-dev'"
 test -d $HOME/.cache/mendeley_dropbox || mkdir -p $HOME/.cache/mendeley_dropbox
+
+export PYTHONPATH="/usr/local/python/lib/python2.7/"
